@@ -23,9 +23,28 @@ html,body {
 }
 
 #map svg circle {
-  fill: steelblue;
-  fill-opacity: 0.6;
+  /* Traffic flow colors */
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+
+  --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
+
+  fill: var(--color);
   stroke: white;
   stroke-width: 1.5px;
   pointer-events: auto;
+}
+#map svg circle,
+.legend > div {
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
 }

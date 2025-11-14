@@ -8,3 +8,39 @@ body {
     margin: auto;
     padding: 1em;
   }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  align-self: flex-start;
+}
+#time-filter {
+  margin-left: auto;
+  text-align: right;
+}
+#time-filter time,
+#time-filter em {
+  display: block;
+}
+#any-time {
+  color: #777;
+  font-style: italic;
+}
+.legend {
+  display: flex;
+  gap: 1px;
+  margin-block: 1em;
+  width: 100%;          /* Full width of the layout container */
+  max-width: 100%;       /* Ensures no shrinking */
+}
+
+.legend > div {
+  flex: 1;
+  padding: 0.5em 1.25em;
+  text-align: center;
+  background: var(--color);
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+}
